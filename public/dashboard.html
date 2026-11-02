@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0">
+
+    <title>Dashboard | Proyecto Full Stack</title>
+
+    <link rel="stylesheet" href="styles.css">
+
+</head>
+
+<body>
+
+    <div class="contenedor-dashboard">
+
+        <!-- ENCABEZADO -->
+
+        <header class="encabezado">
+
+            <div>
+
+                <h1>Panel de Administración</h1>
+
+                <p>
+                    Gestión de registros almacenados en MongoDB
+                </p>
+
+            </div>
+
+            <button id="btnCerrarSesion">
+
+                Cerrar Sesión
+
+            </button>
+
+        </header>
+
+        <!-- FORMULARIO -->
+
+        <section class="formulario-section">
+
+            <h2>Registrar Nuevo Item</h2>
+
+            <p class="descripcion-formulario">
+                Complete la información para almacenar un nuevo registro en la base de datos.
+            </p>
+
+            <form id="itemForm">
+
+                <div class="grupo-campos">
+
+                    <div class="campo">
+
+                        <label for="nombre">
+                            Nombre
+                        </label>
+
+                        <input
+                            type="text"
+                            id="nombre"
+                            placeholder="Ej. Producto A"
+                            required>
+
+                    </div>
+
+                    <div class="campo">
+
+                        <label for="descripcion">
+                            Descripción
+                        </label>
+
+                        <textarea
+                            id="descripcion"
+                            rows="4"
+                            placeholder="Ingrese una descripción"
+                            required>
+                        </textarea>
+
+                    </div>
+
+                </div>
+
+                <button
+                    type="submit"
+                    class="btn-guardar">
+
+                    Guardar Registro
+
+                </button>
+
+            </form>
+
+        </section>
+
+        <!-- LISTA DE ITEMS -->
+
+        <section class="lista-section">
+
+            <h2>Registros Guardados</h2>
+
+            <p class="descripcion-formulario">
+                Información obtenida directamente desde MongoDB mediante la API REST.
+            </p>
+
+            <div id="listaItems">
+
+                <!--
+                dashboard.js insertará aquí
+                dinámicamente los registros.
+                -->
+
+            </div>
+
+        </section>
+
+    </div>
+
+    <script src="dashboard.js"></script>
+
+</body>
+
+</html>
